@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: boutique
+spec:
+  destination:
+    namespace: boutique
+    server: https://34.71.20.60
+  project: default
+  source:
+    path: argocd-demo/boutique
+    repoURL: https://github.com/jasonsmithio/cncf-devops-demo.git
+    targetRevision: develop-mpm
